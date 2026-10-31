@@ -8,6 +8,7 @@ using namespace std;
 
 int main() {
     int operation;
+
     double num1, num2;
     cin >> operation >> num1 >> num2;
     if (operation == 1) cout << num1 + num2 << endl;
@@ -19,4 +20,36 @@ int main() {
     }
     if (operation < 1 || operation > 4) cout << "err" << endl;
     return 0;
+
+    double firstNum, secondNum;
+    if(!(cin >> operation >> firstNum >> secondNum)) {
+        return 1;
+    }
+    double result = 0;
+    bool isResult = true;
+
+    switch(operation){
+        case 1:
+            result = firstNum + secondNum;
+            break;
+        case 2:
+            result = firstNum - secondNum;
+            break;
+        case 3:
+            result = firstNum * secondNum;
+            break;
+        case 4:
+            if(secondNum != 0)
+                result = firstNum / secondNum;
+            else
+                isResult = false;
+                break;
+    }
+    if (isResult){
+        cout << result;
+    }
+    else {
+        cout << "err";
+    }
+
 }

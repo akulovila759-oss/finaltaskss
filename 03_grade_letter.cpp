@@ -7,7 +7,10 @@
 using namespace std;
 
 int main() {
+
     int ball;
+
+
     const int threshold_A = 90;
     const int threshold_B = 80;
     const int threshold_C = 70;
@@ -20,5 +23,14 @@ int main() {
     else if (ball >= threshold_D) ground = 'D';
     else ground = 'F';
     cout << ground << endl;
+    int ball;
+    cin >> ball;
+    char grade;
+    if (ball >= threshold_A) grade = 'A';
+    else if (ball >= threshold_B) grade = 'B';
+    else if (ball >= threshold_C) grade = 'C';
+    else if (ball >= threshold_D) grade = 'D';
+    else grade = 'F';
+    cout << grade;
     return 0;
 }
